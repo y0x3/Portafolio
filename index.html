@@ -1,99 +1,145 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <title>Portafolio DiegoCM</title>
-  <link rel="stylesheet" href="index.css">
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
-</head>
-<body>
-  <div class="saludo">
-    <img src="gatoo.jpeg" alt="Logo de DiegoCM" class="logo">
-    <h1><span class="resaltado">DiegoCM</span>!</h1>
-    <h2>Front End Developer</p>
-      <div class="botones">
-        <a href="https://github.com/y0x3" target="_blank" class="btn github">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" />
-          GitHub
-        </a>
-        <a href="https://linkedin.com/in/diegocontrerasmunoz" target="_blank" class="btn linkedin">
-          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" />
-          LinkedIn
-        </a>
-      </div>
-  </div>
+    <html lang="es">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio DiegoCM</title>
 
- <div class="barra_superior">
-  <nav>
-    <ul>
-      <li><a href="#sobre_mi">SobreMí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</div>
+    <!-- CSS de fullPage.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css">
+    <link rel="stylesheet" href="index.css  ">
+    </head>
+        <body>
+            <div id="fullpage">
+                <!-- INICIO-->
+                <div class="section" id="saludo">
+                <div id="tsparticles"></div>
+                <div class="contenido-saludo">
+                    <img src="src/gatoo.jpeg" alt="Logo de DiegoCM" class="logo">
+                        <h1>¡hola! Soy <span class="resaltado">Diego Contreras</span></h1>
+                        <h2><span class="resaltado">Front-End</span> Developer</p>
+                        <div class="botones">
+                            <a href="https://github.com/y0x3" class="btn github" target="_blank">
+                                <img src="src/github-original.svg" alt="GitHub">
+                            </a>
+                            <a href="https:linkedin.com/in/diegocontrerasmunoz" class="btn linkedin" target="_blank">
+                                <img src="src/LinkedIn_icon.svg" alt="LinkedIn">
+                            </a>    
+                            <a href="https://mail.google.com/mail/?view=cm&to=diegocontrerasmunoz123@gmail.com" class="btn gmail" target="_blank">
+                                <img src="src/gmail-original.svg" alt="Gmail">
+                            </a>
 
-<h2 id="H2proyectos">Proyectos Destacados</h2>
+                            <a href="https://wa.me/527712637337" class="btn whatsapp" target="_blank">
+                                <img src="src/whatsapp-original.svg" alt="WhatsApp">
+                            </a>
+                        </div>
+                    <button class="cv_button" id="descargar-cv">Descargar CV</button>
+                </div>
+                </div>
 
-<div class="proyectos" id="proyectos">
-  <div class="proyecto">
-    <img src="ajedrez ciego.png" alt="ajedrez-ciego" id="imgproyecto">
-    <h3>Ajedrez Ciego</h3>
-    <p>variante de ajedrez con un modo diferente de acomodar las piezas.</p>
-    <a href="https://ajedrez-ciego.vercel.app/" target="_blank">Ver Proyecto</a>
-  </div>
-  <div class="proyecto">
-    <img src="pageve.png" alt="pag-eve-v2" id="imgproyecto">
-    <h3>Galeria compratida de fotos</h3>
-    <p>Sitio enfocado en galeria compartida para un evento social.</p>
-    <a href="https://pag-eve-v2.vercel.app/" target="_blank">Ver Proyecto</a>
-  </div>
-  <div class="proyecto">
-    <img src="palabras.png" alt="Palabras" id="imgproyecto">
-    <h3>PALABRAS</h3>
-    <p>mini juego local de escribir palabras que empiecen con la ultima letra de la palabra anterior.</p>
-    <a href="https://palabras-alpha.vercel.app/" target="_blank">Ver Proyecto</a>
-  </div>
-</div>
+                <!-- PROYECTOS-->
+                <div class="section" id="proyectos">
+                <div class="proyectos-layout">
+                    <!-- Columna izquierda -->
+                    <div class="proyectos-sidebar">
+                    <h2>Proyectos</h2>
+                    <button id="toggle-list">Lista Proyectos</button>
+                    <ul id="lista-proyectos" class="oculto">
+                        <li data-proyecto="1">Ajedrez Ciego</li>
+                        <li data-proyecto="2">Galeria compratida</li>
+                        <li data-proyecto="3">Juego Plabras</li>
+                        <!-- Agrega más proyectos aquí -->
+                    </ul>
+                    
 
-<div class="contacto" id="contacto">
-  <nav>
-    <ul>
-      <li><a href="" target="_blank">Correo Electrónico</a></li>
-      <li><a href="" target="_blank">Teléfono</a></li>
-      <li><a href="" target="_blank">Redes Sociales</a></li>
-    </ul>
-  </nav>
-  <h2 id="contacto">Contacto</h2>
-</div>>
-
-<div class="sobre_mi" id="sobre_mi">
-  <div class="sobre-mi-card">
-    <img src="gatoo.jpeg" alt="Foto de DiegoCM" class="sobre-mi-foto">
-    <div class="sobre-mi-info">
-      <h2>Sobre Mí</h2>
-      <h3>Diego Contreras Muñoz</h3>
-      <p>
-        Soy un apasionado desarrollador Front End con experiencia en <strong>HTML</strong>, <strong>CSS</strong> y <strong>JavaScript</strong>. Me encanta crear interfaces de usuario atractivas y funcionales.<br>
-        En mi tiempo libre disfruto aprender nuevas tecnologías y mejorar mis habilidades de programación.
-      </p>
-      <div class="habilidades">
-        <img src="html5-logo.svg" alt="HTML5" title="HTML5">
-        <img src="css3-logo.svg" alt="CSS3" title="CSS3">
-        <img src="js-logo.svg" alt="JavaScript" title="JavaScript">
-        <!-- Agrega más logos si quieres -->
-      </div>
-    </div>
-  </div>
-</div>
+                    </div>
+                    <!-- Vista principal -->
+                    <div class="proyectos-main">
+                    <div id="proyecto-vista">
+                            <iframe 
+                            id="proyecto-iframe"
+                            src="https://ajedrez-ciego.vercel.app/"
+                            allowfullscreen
+                            loading="lazy"
+                            ></iframe>
+                        </div>
+                        <!-- Info inferior -->
+                        <div class="proyecto-info">
+                            <h3 id="proyecto-titulo">Proyecto 1</h3>
+                            <p id="proyecto-desc">Descripción breve del proyecto seleccionado.</p>
+                            <div class="tecnologias" id="proyecto-tecnologias">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <a href="#" target="_blank" id="proyecto-link" class="ver-proyecto">Ver Proyecto</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
 
-  <!-- Fondo animado de partículas -->
-  <div id="tsparticles"></div>
+                <!-- SOBRE MI -->
+                <div class="section" id="sobre_mi">
+                    <h2 id="Tsobremi">Sobre Mí</h2>
+                    <div class="sobre-mi">
+                    <img src="src/gatoo.jpeg" alt="Foto de DiegoCM" class="foto-perfil">
+                    <div class="sobre-mi-info">
+                            <p>Soy desarrollador web con conocimientos en html, css, js y wordpress. actualmente practicando tecnologais back-end con el proposito de vovlerme un desarrollador full stak</p>
+                            <p>Estudios: Ingeniero En software - Universidad Politecnica De Pachuca</p>
+                    </div>
+                    </div>
+                    <div class="alltecs">
+                        <div class="mistecsFront">
+                            <h3>Front-End</h3>
+                            <ul class="tecs-grid">
+                                <li><img src="src/html5-brands-solid.svg" alt="HTML" title="HTML"></li>
+                                <li><img src="src/css-brands.svg" alt="CSS" title="CSS"></li>
+                                <li><img src="src/js-brands.svg" alt="JavaScript" title="JavaScript"></li>
+                                <li><img src="src/git.svg" alt="Git" title="Git"></li>
+                                <li><img src="src/wordpress.svg" alt="Git" title="Git"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+
+                        <div class="newtecsBack">
+                            <h3>Back-End</h3>
+                            <ul class="tecs-grid">
+                                <li><img src="src/firebase.svg" alt="Firebase" title="Firebase"></li>
+                                <li><img src="src/XAMPP.svg" alt="XAMPP" title="XAMPP"></li>
+                                <li><img src="src/sql.svg" alt="SQL" title="SQL"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li> 
+                            </ul>
+                        </div>
+
+                        <div class="newtecs">
+                            <h3>Tecnologías que estoy aprendiendo</h3>
+                            <ul class="tecs-grid">
+                                <li><img src="src/node.svg" alt="Node.js" title="Node.js"></li>
+                                <li><img src="src/postgresql.svg" alt="postgresql" title="postgresql"></li>
+                                <li><img src="src/react.svg" alt="react" title="react"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
 
-</body>
-<footer></footer>
-<script src="index.js"></script>
+            </div>
+
+            <!-- fullPage.js -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.js"></script>
+            <!-- tsParticles -->
+            <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+            <!-- JS propio -->
+            <script src="index.js"></script>
+    </body>
 </html>

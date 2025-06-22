@@ -1,212 +1,340 @@
-/* Fondo animado */
-    #tsparticles {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      z-index: -2;
-      top: 0;
-      left: 0;
-       pointer-events: none;
-    }
-
-    body {
-      margin: 0;
-      font-family: sans-serif;
-      color: white;
-    }
-
-    /* SALUDO FIJO */
-    .saludo {
-      margin-top: 3%;
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      z-index: -1;
-      text-align: center;
-      pointer-events: auto; 
-    
-    }
-
-    .saludo h1 {
-      font-size: 4rem;
-    }
-
-    .saludo .resaltado {
-      color: #ffcc00;
-    }
-
-    .contenido {
-      position: relative;
-      z-index: 1;
-      padding: 40vh 2rem 2rem; /* Empieza después de la altura de la pantalla */
-      background-color: #333;
-      
-    }
-
-    section {
-      margin-bottom: 3rem;
-    }
-
-    .logo{
-        width: 200px;
-        height: 200px;
-    }
-
-    .botones {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    }
-    /* Botones base */
-    .btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #fff;
-    }
-
-    .btn img {
-    width: 20px;
-    height: 20px;
-    }
-
-    /* GitHub button */
-    .github {
-    background-color: #333;
-    }
-
-    .github:hover {
-    background-color: #555;
-    }
-
-    /* LinkedIn button */
-    .linkedin {
-    background-color: #0A66C2;
-    }
-
-    .linkedin:hover {
-    background-color: #004182;
-    }
-
-    .barra_superior {
-    position:  sticky;
-    top: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.815); /* Fondo semitransparente */
-    backdrop-filter: blur(8px);     /* Difuminado del fondo */
-    z-index: 999;
-    }
-
-    .barra_superior nav ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0.8rem 1rem;
-    gap: 2rem;  /* Espacio entre enlaces */
-    }
-
-    .barra_superior nav ul li a {
-    color: #000000;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.4rem 0.8rem;
-    border-radius: 5px;
-    }
-
-    .barra_superior nav ul li a:hover {
-    background-color: #ffcc00;
-    color: #000000;
-    }
-
-    .contenido{
-       width: 60%;
-        margin: 0 auto; 
-    }
-
-    .section {
-    height: 100vh;   /* Ocupa el 100% de la pantalla */
-    display: flex;   /* Para centrar contenido fácilmente */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem;
-    }
-
-    .proyectos{
-        gap: 2rem; /* Espacio entre tarjetas */
-         display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
-    
-    }
-
-    #imgproyecto {
-        height: 120px;
-        width: 200px;
-        object-fit: cover; /* Mantiene la proporción de la imagen */
-    }
-
-    .proyecto{
-        text-align: center;
-        margin-bottom: 2rem;
-        background: rgba(8, 8, 8, 0.815); /* Fondo semitransparente */
-        backdrop-filter: blur(8px);
-        width: 30%; /* Cada tarjeta ocupa un tercio del ancho */
-        
-    }
-
-    #H2proyectos{
-        padding: 20vh 2rem 2rem;
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .contacto{
-        padding: 40vh 2rem 2rem;
-        text-align: center;
-        margin-bottom: 2rem;
-        display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0.8rem 1rem;
-    gap: 2rem;  /* Espacio entre enlaces */
-    }
-
-    .sobre_mi {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-
-    .sobre-mi-card {
-  display: flex;
-  align-items: center;
-  background: rgba(30, 30, 30, 0.95);
-  border-radius: 18px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
-  padding: 2rem;
-  max-width: 700px;
-  margin: 2rem auto;
-  gap: 2rem;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  
 }
 
-.sobre-mi-foto {
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+  height: 100vh; /* <-- Agrega esto */
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+#saludo {
+  position: relative;
+  background: transparent !important; /* <-- Fuerza fondo transparente */
+  overflow: hidden;
+}
+
+.contenido-saludo {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.section:not(#saludo) {
+  background-color: #222; /* Fondo sólido para las demás secciones */
+}
+
+#proyectos {
+  background: linear-gradient(180deg, #181818 60%, #181818 100%);
+ 
+}
+
+#sobre_mi {
+  background: linear-gradient(180deg, #131313 40%, #afafaf 100%);
+}
+
+#contacto {
+  background: linear-gradient(180deg, #000000 80%, #131313 100%);
+}
+
+.contenido-saludo h1{
+  color: #ffffff;
+}
+
+.logo{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.btn img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* Hace blanco un ícono oscuro (opcional) */
+}
+
+.linkedin img {
+  filter: none !important;
+}
+
+
+/* Colores por red */
+.github {
+  background-color: #333;
+}
+.github:hover {
+  background-color: #555;
+}
+
+.linkedin {
+  background-color: #0A66C2;
+}
+.linkedin:hover {
+  background-color: #004182;
+}
+
+.gmail {
+  background-color: #D44638;
+}
+.gmail:hover {
+  background-color: #A23327;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+.whatsapp:hover {
+  background-color: #1DA851;
+}
+
+.contenido-saludo .resaltado {
+      color: #ffcc00;
+}
+
+#proyectos{
+color: rgb(255, 255, 255);
+  
+}
+
+.proyectos-layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  /* Fondo negro difuminado con rojo */
+  background: linear-gradient(135deg, #181818 60%, #b31217 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+
+.proyectos-sidebar {
+  background-color: #d8d8d8;
+background-image: url("https://www.transparenttextures.com/patterns/brilliant.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  color: #000000;
+  padding: 2rem 1rem;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 2px solid #000000;
+  
+}
+
+.proyectos-sidebar h2 {
+  margin-top: 50PX;
+  color: #000000;
+}
+
+#toggle-list {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#lista-proyectos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0.95rem;
+}
+
+#lista-proyectos li {
+  padding: 0.5rem 0.5rem;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-bottom: 0.3rem;
+  transition: background 0.2s;
+}
+
+#lista-proyectos li:hover, #lista-proyectos li.selected {
+  background: #b2da00;
+  color: #000000;
+}
+
+.oculto {
+  display: none;
+}
+
+.proyectos-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  background: #1C1C1C;
+  height: 100%;
+  min-width: 0;
+}
+
+#proyecto-vista {
+  width: 100%;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+  margin-bottom: 2rem;
+}
+
+.proyecto-info {
+  width: 100%;
+ background-color: #1C1C1C;
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+  border-radius: 12px;
+  padding: 1.2rem;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  margin-bottom: 16px; /* <-- Agrega este margen inferior */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* <-- Centra el contenido */
+  text-align: center;
+}
+
+.proyecto-info h3 {
+  margin: 0 0 0.5rem 0;
+  color: #ffcc00;
+}
+
+.proyecto-info p {
+  margin-bottom: 1rem;
+  color: #eee;
+  font-size: 1rem;
+}
+
+.tecnologias span {
+  display: inline-block;
+  background: #444;
+  color: #ffcc00;
+  border-radius: 8px;
+  padding: 0.2rem 0.7rem;
+  margin-right: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.ver-proyecto {
+  margin-top: 1rem;
+  background: #ffffff;
+  color: #000000;
+  text-decoration: none;
+  padding: 0.3rem 0.8rem;   /* Más pequeño */
+  border-radius: 8px;
+  text-align: center;
+  transition: background 0.2s;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.95rem;       /* Más pequeño */
+}
+
+.ver-proyecto:hover {
+  background: #004182;
+}
+
+#proyecto-iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  background: #fff;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tech-logo {
+  width: 32px;
+  height: 32px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  border-radius: 6px;
+  background: #fff;
+  padding: 2px;
+}
+
+.cv_button {
+  display: inline-block;
+  background-color: #ffffff;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-decoration: none !important;
+  font-weight: bold;
+  transition: 
+    background-color 0.3s ease,
+    color 0.3s,
+    transform 0.2s,
+    box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+.cv_button:hover {
+  background-color: #ffcc00;
+  color: #181818;
+  transform: scale(1.08) translateY(-2px);
+  box-shadow: 0 6px 24px #ffcc0033, 0 1px 4px rgba(0,0,0,0.18);
+  cursor: pointer;
+}
+
+.sobre-mi {
+  display: flex;
+  align-items: flex-start;
+   justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sobre-mi-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sobre-mi .foto-perfil{
   width: 140px;
   height: 140px;
   border-radius: 50%;
@@ -216,36 +344,191 @@
   background: #fff;
 }
 
-.sobre-mi-info {
-  flex: 1;
+.sobre-mi p {
   color: #fff;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  margin-bottom: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+.alltecs {
+
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  margin: 10rem 0;
+ /* Quita el borde de debug */
 }
 
-.sobre-mi-info h2 {
-  margin: 0 0 0.5rem 0;
+.mistecsFront, .newtecsBack, .newtecs {
+  background: #232323;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  padding: 1.2rem 1.5rem;
+  min-width: 300px;
+  flex: 0 1 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mistecsFront:hover, .newtecsBack:hover, .newtecs:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.18);
+}
+
+.mistecsFront h3,
+.newtecsBack h3,
+.newtecs h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
   color: #ffcc00;
+  font-size: 1.15rem;
+  letter-spacing: 1px;
+}
+
+.mistecsFront ul, .newtecsBack ul, .newtecs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.mistecsFront li, .newtecsBack li, .newtecs li {
+  background: #181818;
+  color: #ffcc00;
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.mistecsFront li:last-child, .newtecsBack li:last-child, .newtecs li:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive para móviles */
+@media (max-width: 900px) {
+  .alltecs {
+    flex-direction: column;
+    gap: 1.2rem;
+    align-items: center;
+  }
+}
+
+#Tsobremi {
+  color: #ffcc00;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.tecs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 48px);
+  grid-template-rows: repeat(2, 48px);
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.tecs-grid li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  min-width: 48px;
+  min-height: 48px;
+}
+
+.tecs-grid img {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.10);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.tecs-grid img:hover {
+  transform: scale(1.18) rotate(-6deg);
+  box-shadow: 0 4px 16px #dcff13cc, 0 1px 4px rgba(0,0,0,0.18);
+  background: #ffe0e0;
+  z-index: 2;
+}
+
+
+#contacto h2 {
+  color: #ffcc00;
+  margin-bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;  
+
+  border: 2px solid #ffcc00;
+}
+
+#contacto {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+#contacto h2 {
+  margin-bottom: 1.5rem;
   font-size: 2rem;
 }
 
-.sobre-mi-info h3 {
-  margin: 0 0 1rem 0;
-  color: #b31217;
-  font-size: 1.3rem;
+.formulario-contacto {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-.sobre-mi-info p {
-  margin-bottom: 1.2rem;
-  line-height: 1.6;
-  font-size: 1.05rem;
+.formulario-contacto input,
+.formulario-contacto textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.3s;
 }
 
-.habilidades img {
-  width: 38px;
-  height: 38px;
-  margin-right: 0.7rem;
-  vertical-align: middle;
-  background: #fff;
-  border-radius: 8px;
-  padding: 4px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+}
+
+.formulario-contacto button {
+  padding: 0.75rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background-color: #005fa3;
 }
