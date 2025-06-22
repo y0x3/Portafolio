@@ -1,0 +1,251 @@
+/* Fondo animado */
+    #tsparticles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      top: 0;
+      left: 0;
+       pointer-events: none;
+    }
+
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      color: white;
+    }
+
+    /* SALUDO FIJO */
+    .saludo {
+      margin-top: 3%;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: -1;
+      text-align: center;
+      pointer-events: auto; 
+    
+    }
+
+    .saludo h1 {
+      font-size: 4rem;
+    }
+
+    .saludo .resaltado {
+      color: #ffcc00;
+    }
+
+    .contenido {
+      position: relative;
+      z-index: 1;
+      padding: 40vh 2rem 2rem; /* Empieza después de la altura de la pantalla */
+      background-color: #333;
+      
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .logo{
+        width: 200px;
+        height: 200px;
+    }
+
+    .botones {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    }
+    /* Botones base */
+    .btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    }
+
+    .btn img {
+    width: 20px;
+    height: 20px;
+    }
+
+    /* GitHub button */
+    .github {
+    background-color: #333;
+    }
+
+    .github:hover {
+    background-color: #555;
+    }
+
+    /* LinkedIn button */
+    .linkedin {
+    background-color: #0A66C2;
+    }
+
+    .linkedin:hover {
+    background-color: #004182;
+    }
+
+    .barra_superior {
+    position:  sticky;
+    top: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.815); /* Fondo semitransparente */
+    backdrop-filter: blur(8px);     /* Difuminado del fondo */
+    z-index: 999;
+    }
+
+    .barra_superior nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.8rem 1rem;
+    gap: 2rem;  /* Espacio entre enlaces */
+    }
+
+    .barra_superior nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    }
+
+    .barra_superior nav ul li a:hover {
+    background-color: #ffcc00;
+    color: #000000;
+    }
+
+    .contenido{
+       width: 60%;
+        margin: 0 auto; 
+    }
+
+    .section {
+    height: 100vh;   /* Ocupa el 100% de la pantalla */
+    display: flex;   /* Para centrar contenido fácilmente */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    }
+
+    .proyectos{
+        gap: 2rem; /* Espacio entre tarjetas */
+         display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    
+    }
+
+    #imgproyecto {
+        height: 120px;
+        width: 200px;
+        object-fit: cover; /* Mantiene la proporción de la imagen */
+    }
+
+    .proyecto{
+        text-align: center;
+        margin-bottom: 2rem;
+        background: rgba(8, 8, 8, 0.815); /* Fondo semitransparente */
+        backdrop-filter: blur(8px);
+        width: 30%; /* Cada tarjeta ocupa un tercio del ancho */
+        
+    }
+
+    #H2proyectos{
+        padding: 20vh 2rem 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .contacto{
+        padding: 40vh 2rem 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0.8rem 1rem;
+    gap: 2rem;  /* Espacio entre enlaces */
+    }
+
+    .sobre_mi {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    .sobre-mi-card {
+  display: flex;
+  align-items: center;
+  background: rgba(30, 30, 30, 0.95);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+.sobre-mi-foto {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffcc00;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+  background: #fff;
+}
+
+.sobre-mi-info {
+  flex: 1;
+  color: #fff;
+}
+
+.sobre-mi-info h2 {
+  margin: 0 0 0.5rem 0;
+  color: #ffcc00;
+  font-size: 2rem;
+}
+
+.sobre-mi-info h3 {
+  margin: 0 0 1rem 0;
+  color: #b31217;
+  font-size: 1.3rem;
+}
+
+.sobre-mi-info p {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.habilidades img {
+  width: 38px;
+  height: 38px;
+  margin-right: 0.7rem;
+  vertical-align: middle;
+  background: #fff;
+  border-radius: 8px;
+  padding: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
