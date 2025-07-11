@@ -139,8 +139,8 @@ document.querySelector("#lista-proyectos li").click();
 // Descargar CV
 document.getElementById("descargar-cv").onclick = function() {
   const link = document.createElement('a');
-  link.href = 'CvDiegoContrerasMuñoz.pdf';
-  link.download = 'CvDiegoContrerasMuñoz.pdf';
+  link.href = 'src/CvDiegoContrerasMuñoz.pdf';
+  link.download = 'src/CvDiegoContrerasMuñoz.pdf';
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
